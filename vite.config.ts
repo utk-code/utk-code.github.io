@@ -7,6 +7,10 @@ export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
     base: '/',
+    build: {
+      outDir: 'docs',
+      emptyOutDir: true,
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
