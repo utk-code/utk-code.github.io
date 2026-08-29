@@ -46,14 +46,14 @@ export function Work() {
         </div>
 
         {/* next website flex */}
-        <Reveal className="mt-24 mb-16 border-t border-line pt-8 md:mt-32 md:mb-20 md:pt-12">
+        <Reveal className="mt-24 border-t border-line pt-8 md:mt-32 md:pt-12">
           <p className="max-w-xl font-display text-2xl font-bold leading-tight tracking-tight text-paper/80 sm:text-4xl">
             Your next website <span className="text-acid">could be here.</span>
           </p>
         </Reveal>
 
         {/* visual spacer between Work and Services */}
-        <div className="h-24 md:h-32 lg:h-40" />
+        <div className="h-14 md:h-20 lg:h-24" />
       </div>
     </section>
   );
@@ -121,6 +121,19 @@ function ProjectRow({
             {project.subtitle} — {project.category}
           </p>
           <p className="mt-2 max-w-xl text-paper/90 sm:text-lg">{project.description}</p>
+          <div className="mt-5">
+            <a
+              href={project.url || '#contact'}
+              {...(project.url ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+              className={cx(
+                'group inline-flex items-center gap-2 border border-line-strong px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em]',
+                'text-paper transition-colors hover:border-acid hover:text-acid bg-ink/40 backdrop-blur-sm'
+              )}
+            >
+              Explore project
+              <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </article>

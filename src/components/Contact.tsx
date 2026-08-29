@@ -59,7 +59,7 @@ export function Contact() {
                 href={`mailto:${site.email}`}
                 className="group inline-flex items-center gap-3 bg-acid px-8 py-5 font-display text-xl font-bold tracking-tight text-ink transition-transform duration-300 hover:scale-[1.03] sm:px-10 sm:py-6 sm:text-2xl"
               >
-                Start a Project
+                Contact Us
                 <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
               </a>
             </Magnetic>

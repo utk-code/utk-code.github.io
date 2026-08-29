@@ -72,7 +72,7 @@ export function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-3 bg-acid px-6 py-4 font-display text-lg font-bold tracking-tight text-ink transition-transform duration-300 hover:scale-[1.03] sm:px-8 sm:py-5 sm:text-xl"
             >
-              Start a Project
+              Contact Us
               <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
             </a>
           </Magnetic>
