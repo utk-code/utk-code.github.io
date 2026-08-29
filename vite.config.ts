@@ -6,7 +6,7 @@ import path from 'node:path';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
-    base: '/utkcode-main/',
+    base: '/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
