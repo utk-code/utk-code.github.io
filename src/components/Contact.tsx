@@ -9,7 +9,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex flex-col justify-between overflow-hidden border-t border-line px-5 py-24 sm:px-8 md:py-36"
+      className="relative flex flex-col overflow-hidden border-t border-line px-5 py-12 sm:px-8 md:py-16"
     >
       {/* ghost accent line */}
       <div
@@ -68,7 +68,7 @@ export function Contact() {
       </div>
 
       {/* contact strip */}
-      <div className="relative z-10 mx-auto mt-20 w-full max-w-[1500px]">
+      <div className="relative z-10 mx-auto mt-10 w-full max-w-[1500px]">
         <Reveal>
           <div className="flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">
