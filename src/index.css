@@ -90,6 +90,36 @@
   animation: marquee 28s linear infinite;
 }
 
+/* Hero wordmark — responsive to both width and viewport height */
+.hero-wordmark {
+  font-size: clamp(2.6rem, min(21vw, 36vh), 22rem);
+}
+
+/* On shorter desktop screens, shrink and tighten so the hero fits
+   the first viewport without clipping (no scrolling to reach the CTA). */
+@media (max-height: 760px) {
+  .hero-wordmark {
+    font-size: clamp(2.2rem, min(17vw, 24vh), 16rem);
+  }
+  #top .hero-meta {
+    margin-bottom: 1.25rem;
+  }
+  #top .hero-wordmark-wrap {
+    margin-top: 0;
+  }
+  #top .hero-prop-row {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+  #top .hero-prop {
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    line-height: 1.1;
+  }
+  #top .hero-line {
+    display: none;
+  }
+}
+
 /* Hero wordmark entrance */
 @keyframes rise {
   from {

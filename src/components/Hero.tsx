@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col justify-end overflow-hidden px-5 pb-10 pt-32 sm:px-8 md:pb-14"
+      className="relative flex h-[100svh] flex-col justify-center overflow-hidden px-5 py-10 sm:px-8"
     >
       {/* backdrop grid hairline */}
       <div
@@ -31,7 +31,7 @@ export function Hero() {
         initial={reduced ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="relative z-10 mb-auto flex flex-wrap items-start justify-between gap-6 font-mono text-[10px] uppercase tracking-[0.22em] text-paper-dim sm:text-[11px]"
+        className="hero-meta relative z-10 mb-auto flex flex-wrap items-start justify-between gap-6 font-mono text-[10px] uppercase tracking-[0.22em] text-paper-dim sm:text-[11px]"
       >
         <div className="space-y-1">
           <p>Digital Studio — Est. 2025</p>
@@ -44,21 +44,14 @@ export function Hero() {
       </motion.div>
 
       {/* THE WORDMARK */}
-      <div className="relative z-10 -mx-2 leading-[0.78]">
+      <div className="hero-wordmark-wrap relative z-10 -mx-2 leading-[0.78]">
         {reduced ? (
-          <h1
-            className="font-display font-extrabold tracking-[-0.05em] text-paper"
-            style={{ fontSize: 'clamp(4rem, 22vw, 24rem)' }}
-          >
+          <h1 className="hero-wordmark font-display font-extrabold tracking-[-0.05em] text-paper">
             UTK<span className="text-paper">CODE</span>
             <span className="inline-block h-[0.6em] w-[0.09em] translate-y-[0.1em] bg-acid" />
           </h1>
         ) : (
-          <h1
-            className="font-display font-extrabold tracking-[-0.05em] text-paper"
-            style={{ fontSize: 'clamp(4rem, 22vw, 24rem)' }}
-            aria-label="UTKCODE"
-          >
+          <h1 className="hero-wordmark font-display font-extrabold tracking-[-0.05em] text-paper">
             {WORD.split('').map((ch, i) => (
               <span key={i} className="inline-block overflow-hidden align-bottom">
                 <motion.span
@@ -84,13 +77,13 @@ export function Hero() {
       </div>
 
       {/* proposition + CTA row */}
-      <div className="relative z-10 mt-10 flex flex-col gap-8 border-t border-line pt-6 sm:flex-row sm:items-end sm:justify-between md:mt-14">
+      <div className="hero-prop-row relative z-10 mt-10 flex flex-col gap-8 border-t border-line pt-6 sm:flex-row sm:items-end sm:justify-between md:mt-14">
         <div>
           <motion.h2
             initial={reduced ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-md font-display text-3xl font-bold leading-tight tracking-tight text-paper sm:text-4xl md:text-5xl"
+            className="hero-prop max-w-md font-display text-3xl font-bold leading-tight tracking-tight text-paper sm:text-4xl md:text-5xl"
           >
             Websites worth <span className="italic">remembering.</span>
           </motion.h2>
