@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { cx } from '../lib/cx';
 import { site } from '../data/site';
-import { ContactCard } from './ContactCard';
 
-export function Header() {
+interface HeaderProps {
+  onOpenContact: () => void;
+}
+
+export function Header({ onOpenContact }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
-  const [cardOpen, setCardOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -47,20 +49,16 @@ export function Header() {
             ))}
           </nav>
 
-          <a
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault();
-              setCardOpen(true);
-            }}
+          <button
+            type="button"
+            onClick={onOpenContact}
             className="group inline-flex shrink-0 items-center gap-2 border border-line-strong px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-paper transition-colors hover:border-acid hover:text-acid whitespace-nowrap"
           >
             Contact us
             <span className="transition-transform duration-300 group-hover:translate-x-[15%]">↗</span>
-          </a>
+          </button>
         </div>
       </div>
-      <ContactCard open={cardOpen} onClose={() => setCardOpen(false)} />
     </motion.header>
   );
 }

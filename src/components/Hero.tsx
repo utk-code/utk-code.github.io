@@ -1,7 +1,11 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { Magnetic } from './Magnetic';
 
-export function Hero() {
+interface HeroProps {
+  onOpenContact: () => void;
+}
+
+export function Hero({ onOpenContact }: HeroProps) {
   const reduced = useReducedMotion();
 
   return (
@@ -68,13 +72,14 @@ export function Hero() {
           className="flex flex-col items-start gap-6 sm:items-end"
         >
           <Magnetic>
-            <a
-              href="#contact"
+            <button
+              type="button"
+              onClick={onOpenContact}
               className="group inline-flex items-center gap-3 bg-acid px-6 py-4 font-display text-lg font-bold tracking-tight text-ink transition-transform duration-300 hover:scale-[1.03] sm:px-8 sm:py-5 sm:text-xl"
             >
               Contact Us
-              <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
-            </a>
+              <span className="transition-transform duration-300 group-hover:translate-x-1.5">↗</span>
+            </button>
           </Magnetic>
           <a
             href="#work"

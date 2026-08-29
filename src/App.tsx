@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Cursor } from './components/Cursor';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -8,22 +9,26 @@ import { Capabilities } from './components/Capabilities';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollProgress } from './components/ScrollProgress';
+import { ContactCard } from './components/ContactCard';
 
 export default function App() {
+  const [cardOpen, setCardOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen bg-ink text-paper">
       <Cursor />
       <ScrollProgress />
-      <Header />
+      <Header onOpenContact={() => setCardOpen(true)} />
       <main>
-        <Hero />
+        <Hero onOpenContact={() => setCardOpen(true)} />
         <Marquee />
         <Work />
         <Services />
         <Capabilities />
-        <Contact />
+        <Contact onOpenContact={() => setCardOpen(true)} />
       </main>
       <Footer />
+      <ContactCard open={cardOpen} onClose={() => setCardOpen(false)} />
     </div>
   );
 }
