@@ -9,7 +9,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative flex min-h-[88vh] flex-col justify-between overflow-hidden border-t border-line px-5 py-24 sm:px-8 md:py-36"
+      className="relative flex flex-col justify-between overflow-hidden border-t border-line px-5 py-24 sm:px-8 md:py-36"
     >
       {/* ghost accent line */}
       <div

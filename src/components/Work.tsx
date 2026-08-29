@@ -100,7 +100,7 @@ function ProjectRow({
       <VisualBlock
         project={project}
         reduced={reduced}
-        className="aspect-[16/8] w-full md:aspect-[16/6]"
+        className="aspect-[16/10] w-full md:aspect-[16/8]"
         labels={false}
       />
       <div className="absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-ink/80 via-transparent to-ink/30 p-7 sm:p-10">
