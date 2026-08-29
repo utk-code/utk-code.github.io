@@ -1,8 +1,6 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { Magnetic } from './Magnetic';
 
-const WORD = 'UTKCODE';
-
 export function Hero() {
   const reduced = useReducedMotion();
 
@@ -26,52 +24,18 @@ export function Hero() {
         }}
       />
 
-      {/* editorial metadata top */}
-      <motion.div
-        initial={reduced ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="hero-meta relative z-10 mb-auto flex flex-wrap items-start justify-between gap-6 font-mono text-[10px] uppercase tracking-[0.22em] text-paper-dim sm:text-[11px]"
-      >
-        <div className="space-y-1">
-          <p>Digital Studio — Est. 2025</p>
-          <p>Design / Dev / Experiences</p>
-        </div>
-        <div className="space-y-1 text-right">
-          <p>Independent → Scalable</p>
-          <p className="text-acid">Accepting projects</p>
-        </div>
-      </motion.div>
-
       {/* THE WORDMARK */}
       <div className="hero-wordmark-wrap relative z-10 -mx-2 leading-[0.78]">
         {reduced ? (
           <h1 className="hero-wordmark font-display font-extrabold tracking-[-0.05em] text-paper">
-            UTK<span className="text-paper">CODE</span>
-            <span className="inline-block h-[0.6em] w-[0.09em] translate-y-[0.1em] bg-acid" />
+            UTK<br /><span className="text-paper">CODE</span>
+            <span className="block h-[0.6em] w-[0.09em] translate-y-[0.1em] bg-acid" />
           </h1>
         ) : (
           <h1 className="hero-wordmark font-display font-extrabold tracking-[-0.05em] text-paper">
-            {WORD.split('').map((ch, i) => (
-              <span key={i} className="inline-block overflow-hidden align-bottom">
-                <motion.span
-                  className="inline-block"
-                  initial={{ y: '105%' }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.9, delay: 0.15 + i * 0.045, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  {ch}
-                </motion.span>
-              </span>
-            ))}
-            <span className="inline-block overflow-hidden align-bottom">
-              <motion.span
-                className="inline-block h-[0.6em] w-[0.09em] translate-y-[0.12em] bg-acid"
-                initial={{ scaleY: 0 }}
-                animate={{ scaleY: 1 }}
-                transition={{ duration: 0.4, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-              />
-            </span>
+            <span className="block">UTK</span>
+            <span className="block text-paper">CODE</span>
+            <span className="block h-[0.6em] w-[0.09em] translate-y-[0.1em] bg-acid" />
           </h1>
         )}
       </div>
