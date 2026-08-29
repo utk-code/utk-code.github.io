@@ -9,7 +9,6 @@ export const site = {
     { id: 'work', label: 'Work' },
     { id: 'services', label: 'Services' },
     { id: 'capabilities', label: 'Capabilities' },
-    { id: 'contact', label: 'Contact' },
   ],
 };
 

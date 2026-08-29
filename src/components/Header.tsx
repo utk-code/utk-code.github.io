@@ -26,31 +26,33 @@ export function Header() {
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 sm:px-8">
         <a
           href="#top"
-          className="font-mono text-[13px] font-semibold tracking-tight text-paper hover:text-acid"
+          className="font-mono text-[13px] font-semibold tracking-tight text-paper hover:text-acid shrink-0"
           aria-label="UTKCODE — back to top"
         >
           UTKCODE<span className="text-acid">©</span>
         </a>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
-          {site.nav.map((item) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-dim transition-colors hover:text-paper"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-4 sm:gap-6">
+          <nav aria-label="Primary" className="hidden items-center gap-4 lg:flex lg:gap-5">
+            {site.nav.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-paper-dim transition-colors hover:text-paper whitespace-nowrap"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-        <a
-          href="#contact"
-          className="group hidden items-center gap-2 border border-line-strong px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-paper transition-colors hover:border-acid hover:text-acid sm:inline-flex"
-        >
-          Start a project
-          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-        </a>
+          <a
+            href="#contact"
+            className="group inline-flex shrink-0 items-center gap-2 border border-line-strong px-4 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-paper transition-colors hover:border-acid hover:text-acid whitespace-nowrap"
+          >
+            Start a project
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+        </div>
       </div>
     </motion.header>
   );
