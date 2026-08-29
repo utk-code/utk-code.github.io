@@ -26,7 +26,7 @@ export function Contact() {
         </Reveal>
 
         {reduced ? (
-          <h2 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-[9vw]">
+          <h2 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-[clamp(4rem,7vw,6.5rem)]">
             Your website
             <br />
             could look <span className="whitespace-nowrap">better.</span>
@@ -34,7 +34,7 @@ export function Contact() {
             <span className="text-acid">Let's fix that.</span>
           </h2>
         ) : (
-          <h2 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-[9vw]">
+          <h2 className="font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-paper sm:text-7xl md:text-[clamp(4rem,7vw,6.5rem)]">
             <Line delay={0}>Your website</Line>
             <Line delay={0.08}>
               could look <span className="whitespace-nowrap">better.</span>
