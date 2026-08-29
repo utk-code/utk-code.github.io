@@ -45,7 +45,7 @@ export function Contact() {
           </h2>
         )}
 
-        <div className="mt-16 flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
+        <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <Reveal delay={0.1}>
             <p className="max-w-sm text-lg text-paper-dim">
               One great website changes how your business is perceived. Tell us what you're building
