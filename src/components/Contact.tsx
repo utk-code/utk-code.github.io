@@ -20,7 +20,7 @@ export function Contact() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1500px]">
-        <Reveal className="mb-10 flex items-center gap-4">
+        <Reveal className="mb-6 flex items-center gap-4">
           <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-acid">Let's talk</span>
           <span className="h-px flex-1 bg-line" />
         </Reveal>
@@ -68,7 +68,7 @@ export function Contact() {
       </div>
 
       {/* contact strip */}
-      <div className="relative z-10 mx-auto mt-10 w-full max-w-[1500px]">
+      <div className="relative z-10 mx-auto mt-6 w-full max-w-[1500px]">
         <Reveal>
           <div className="flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">
