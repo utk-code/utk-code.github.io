@@ -7,7 +7,7 @@ export function Footer() {
         <a href="#top" className="transition-colors hover:text-acid">
           UTKCODE<span className="text-acid">©</span> {new Date().getFullYear()}
         </a>
-        <span>Websites worth remembering.</span>
+        <span>Design / Development / Experiences</span>
         <a
           href={`mailto:${site.email}`}
           className="transition-colors hover:text-acid"

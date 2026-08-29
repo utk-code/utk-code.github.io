@@ -70,12 +70,15 @@ export function Contact() {
       {/* contact strip */}
       <div className="relative z-10 mx-auto mt-20 w-full max-w-[1500px]">
         <Reveal>
-          <div className="flex flex-col gap-4 border-t border-line pt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim sm:flex-row sm:items-center sm:justify-between">
-            <a href={`mailto:${site.email}`} className="transition-colors hover:text-acid">
-              {site.email}
-            </a>
-            <span>{site.domain}</span>
-            <span>Design / Development / Experiences</span>
+          <div className="flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
+            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">
+              <p className="text-paper">{site.founderName}</p>
+              <a href={`mailto:${site.email}`} className="transition-colors hover:text-acid">
+                {site.email}
+              </a>
+            </div>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">{site.domain}</span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">Design / Development / Experiences</span>
           </div>
         </Reveal>
       </div>

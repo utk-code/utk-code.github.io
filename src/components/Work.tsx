@@ -25,6 +25,19 @@ export function Work() {
           </h2>
         </Reveal>
 
+        {/* Dental Studio flagship header */}
+        <Reveal delay={0.1}>
+          <div className="mt-16 border-t border-line pt-8 md:mt-24">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-acid">Flagship</p>
+            <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-paper sm:text-3xl">
+              Dental Studio.
+            </h3>
+            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-paper-dim">
+              One industry. Three directions.
+            </p>
+          </div>
+        </Reveal>
+
         {/* runway */}
         <div className="mt-20 space-y-32 md:space-y-44">
           {projects.map((p) => (
@@ -33,11 +46,14 @@ export function Work() {
         </div>
 
         {/* next website flex */}
-        <Reveal className="mt-32 border-t border-line pt-12">
+        <Reveal className="mt-24 mb-16 border-t border-line pt-8 md:mt-32 md:mb-20 md:pt-12">
           <p className="max-w-xl font-display text-2xl font-bold leading-tight tracking-tight text-paper/80 sm:text-4xl">
             Your next website <span className="text-acid">could be here.</span>
           </p>
         </Reveal>
+
+        {/* visual spacer between Work and Services */}
+        <div className="h-24 md:h-32 lg:h-40" />
       </div>
     </section>
   );
@@ -101,7 +117,10 @@ function ProjectRow({
               {project.title}
             </h3>
           </div>
-          <p className="mt-3 max-w-xl text-paper/90 sm:text-lg">{project.description}</p>
+          <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.2em] text-acid">
+            {project.subtitle} — {project.category}
+          </p>
+          <p className="mt-2 max-w-xl text-paper/90 sm:text-lg">{project.description}</p>
         </div>
       </div>
     </article>
@@ -140,7 +159,8 @@ function ProjectMeta({ project }: { project: Project }) {
 
         <Magnetic className="mt-7 inline-block">
           <a
-            href="#contact"
+            href={project.url || '#contact'}
+            {...(project.url ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             className={cx(
               'group inline-flex items-center gap-2 border border-line-strong px-5 py-3 font-mono text-[11px] uppercase tracking-[0.18em]',
               'text-paper transition-colors hover:border-acid hover:text-acid'

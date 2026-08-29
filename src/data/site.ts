@@ -3,7 +3,8 @@ import type { Project, Service } from '../types';
 export const site = {
   name: 'UTKCODE',
   domain: 'https://utkcode.me',
-  email: 'hello@utkcode.me',
+  email: 'utkarshpgedam@gmail.com',
+  founderName: 'Utkarsh Gedam',
   tagline: 'Websites worth remembering.',
   nav: [
     { id: 'work', label: 'Work' },
@@ -16,11 +17,11 @@ export const projects: Project[] = [
   {
     index: '01',
     title: 'Dental Studio',
-    subtitle: 'Digital Experience',
+    subtitle: 'Essential',
     year: '2026',
-    category: 'Premium Clinic Website',
+    category: 'Static Dental Website',
     description:
-      'A premium digital experience for a modern dental clinic. Calm, clinical, and quietly confident.',
+      'Clean, fast, static dental website. One industry, one clear direction — essential.',
     focus: ['Art Direction', 'Typography-led UI', 'Conversion'],
     visual: {
       tone: '#2cf2d0',
@@ -29,15 +30,16 @@ export const projects: Project[] = [
       label: 'MINIMAL / CLINICAL',
     },
     layout: 'editorial',
+    url: 'https://dentist.utkcode.me',
   },
   {
     index: '02',
-    title: 'Project Two',
-    subtitle: 'Digital Experience',
+    title: 'Dental Studio',
+    subtitle: 'Dynamic',
     year: '2026',
-    category: 'Business Website',
+    category: 'Dynamic Dental Website',
     description:
-      'A distinctive web presence for a growing business. Built to communicate capability at a glance.',
+      'A dynamic dental experience with richer interaction. One industry, three directions — dynamic.',
     focus: ['Interaction', 'Editorial Grid', 'Performance'],
     visual: {
       tone: '#ff5b4d',
@@ -46,23 +48,25 @@ export const projects: Project[] = [
       label: 'BOLD / EDITORIAL',
     },
     layout: 'split',
+    url: 'https://dentist.utkcode.me',
   },
   {
     index: '03',
-    title: 'Project Three',
-    subtitle: 'Digital Experience',
+    title: 'Dental Studio',
+    subtitle: 'Signature',
     year: '2026',
-    category: 'Digital Experience',
+    category: 'Advanced Dental Website',
     description:
-      'An immersive single-page experience. Typography as the interface, motion as the narrative.',
+      'The strongest dental website. Typography as the interface, motion as the narrative. One industry, three directions — signature.',
     focus: ['Motion', 'Scroll Narrative', 'Interface'],
     visual: {
       tone: '#ffb800',
       tone2: '#141007',
       motif: 'type',
-      label: 'EXPressive / MOTION',
+      label: 'EXpressive / MOTION',
     },
     layout: 'full',
+    url: 'https://dentist.utkcode.me',
   },
 ];
 

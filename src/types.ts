@@ -8,6 +8,7 @@ export interface Project {
   focus: string[];
   visual: Visual;
   layout: 'editorial' | 'split' | 'full';
+  url?: string;
 }
 
 export interface Visual {
